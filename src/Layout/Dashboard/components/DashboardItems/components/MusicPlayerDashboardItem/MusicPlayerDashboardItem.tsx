@@ -2,8 +2,7 @@ import Api from "Constants/Api";
 import Text from "Constants/Text";
 import { DashboardApiItemProps } from "Interfaces/interfaces";
 import DashboardItem from "../DashboardItem/DashboardItem";
-const song = require("Assets/Music/lofi.mp3")
-
+import song from "Assets/Music/lofi.mp3"
 
 const MusicPlayerDashboardItem = (props: DashboardApiItemProps) => {
     const hide = props.hide ?? false;
