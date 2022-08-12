@@ -16,7 +16,8 @@ const Text = {
     LyricsFormInputArtist: "Artist",
     LyricsFormInputSong: "Song",
     LyricsFormButton: "Search",
-    LyricsModalHeading: "Search result"
+    LyricsModalHeading: "Search result",
+    MusicPlayerHeading: "Play music ⏯️",
 }   
 
 export default Text;

@@ -8,4 +8,5 @@ export type DashboardItemsState = {
     hideYesOrNoItem: boolean;
     hideLyricsItem: boolean;
     hideFoxItem: boolean;
+    hideMusicPlayerItem: boolean;
   }

@@ -66,6 +66,13 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     });
   };
 
+  const onMusicPlayerChange = () => {
+    props.setState({
+      ...props.dashboardItems,
+      hideMusicPlayerItem: !props.dashboardItems.hideMusicPlayerItem,
+    });
+  };
+
   const funcs = [
     onYearFactChange,
     onCatFactChange,
@@ -75,6 +82,7 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     onDadJokeChange,
     onYesOrNoChange,
     onLyricsChange,
+    onMusicPlayerChange,
   ];
   const headings = [
     Text.YearFactHeading,
@@ -85,6 +93,7 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     Text.DadJokeHeading,
     Text.YesOrNoHeading,
     Text.LyricsHeading,
+    Text.MusicPlayerHeading,
   ];
 
 

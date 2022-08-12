@@ -8,6 +8,7 @@ import ProgrammingQuoteDashboardItem from "./components/ProgrammingQuoteDashboar
 import YearDashboardItem from "./components/YearDashboardItem/YearDashboardItem";
 import YesOrNoDashboardItem from "./components/YesOrNoDashboardItem/YesOrNoDashboardItem";
 import { Typography  } from "antd";
+import MusicPlayerDashboardItem from "./components/MusicPlayerDashboardItem/MusicPlayerDashboardItem";
 const { Text, Link } = Typography;
 
 interface DashboardItemsProps {
@@ -30,6 +31,7 @@ const DashboardItems = (props: DashboardItemsProps) => {
     <DadJokeDashboardItem hide={props.display.hideDadJokeItem}/>
     <YesOrNoDashboardItem hide={props.display.hideYesOrNoItem}/>
     <LyricsDashboardItem hide={props.display.hideLyricsItem}/>
+    <MusicPlayerDashboardItem hide={props.display.hideMusicPlayerItem} />
     </>
 }
 
