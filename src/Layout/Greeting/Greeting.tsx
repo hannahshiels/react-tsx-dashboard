@@ -1,7 +1,6 @@
 import { PageHeader } from "antd";
 import { useEffect, useState } from "react";
-import "Styles/css/App.css";
-import Text from "Constants/Text";
+import Text from "@constants/Text";
 
 const Greeting = () => {
   const [time, setTime] = useState(Date.now());

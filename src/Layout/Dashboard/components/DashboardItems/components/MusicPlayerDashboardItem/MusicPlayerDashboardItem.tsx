@@ -1,22 +1,14 @@
-import Api from "Constants/Api";
-import Text from "Constants/Text";
-import { DashboardApiItemProps } from "Interfaces/interfaces";
+import Text from "@constants/Text";
+import { DashboardApiItemProps } from "@interfaces/interfaces";
 import DashboardItem from "../DashboardItem/DashboardItem";
-import song from "Assets/Music/lofi.mp3"
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 const MusicPlayerDashboardItem = (props: DashboardApiItemProps) => {
     const hide = props.hide ?? false;
 
-    const createMusicPlayer = (music:string) => {
-        return(
-            <audio style={{display: "flex", width:"100%"}} controls>
-                <source src={music} type="audio/mpeg" /> 
-            </audio>
-        )
-    }
 
     return(
-       <DashboardItem hide={hide} title={Text.MusicPlayerHeading} description={createMusicPlayer(song)}/>
+       <DashboardItem hide={hide} title={Text.MusicPlayerHeading} description={<MusicPlayer/>}/>
     )
 }
 

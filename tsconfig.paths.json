@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@layout/*": ["./src/layout/*"],
+        "@styles/": ["./src/shared/styles/css/"],
+        "@assets/*": ["./src/shared/assets/*"],
+        "@interfaces/*": ["./src/shared/interfaces/*"],
+        "@models/*": ["./src/shared/models/*"],
+        "@constants/*": ["./src/shared/constants/*"],
+        "@hooks/*": ["./src/shared/hooks/*"],
+      }
+    }
+  }

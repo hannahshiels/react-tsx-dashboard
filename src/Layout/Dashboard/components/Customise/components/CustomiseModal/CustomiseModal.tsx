@@ -1,6 +1,6 @@
 import { Checkbox, List, Modal } from "antd";
-import Text from "Constants/Text";
-import { DashboardItemsState } from "Types/types";
+import Text from "@constants/Text";
+import { DashboardItemsState } from "@models/models";
 
 interface CustomiseModalProps {
   isVisible: boolean;
@@ -97,9 +97,9 @@ const CustomiseModal = (props: CustomiseModalProps) => {
   ];
 
 
-  const renderListItem = (onChange: () => void, heading: string) => {
+  const renderListItem = (onChange: () => void, heading: string, key:number) => {
     return (
-      <List.Item>
+      <List.Item key={key}>
         <Checkbox defaultChecked onClick={onChange}>
           {heading}
         </Checkbox>
@@ -111,7 +111,7 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     let listItems = [];
     if(funcs.length === headings.length){
       for(let i = 0; i < funcs.length; i++){
-        const newListItem = renderListItem(funcs[i], headings[i])
+        const newListItem = renderListItem(funcs[i], headings[i], i)
         listItems.push(newListItem)
     }
     }

@@ -1,8 +1,8 @@
 import Button from "antd/lib/button";
 import { useState } from "react";
-import Text from "Constants/Text";
+import Text from "@constants/Text";
 import CustomiseModal from "./components/CustomiseModal/CustomiseModal";
-import { DashboardItemsState } from "Types/types";
+import { DashboardItemsState } from "@models/models";
 
 interface CustomiseProps {
   setDashboardItems:(dashboardItems: DashboardItemsState) => void;
@@ -24,9 +24,8 @@ const Customise = (props:CustomiseProps) => {
     <>
       <Button
         onClick={showModal}
-        className="button"
+        className="customiseBtn"
         type="primary"
-        style={{ zIndex:10000, position: "fixed", bottom: 0, right: 0, margin: "1rem" }}
       >
         {Text.CustomiseMessage}
       </Button>

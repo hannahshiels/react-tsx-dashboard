@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
-/src/Styles/css
+/src/shared/styles/css
 .pnp.js
 
 # testing

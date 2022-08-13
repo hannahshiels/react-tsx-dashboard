@@ -1,4 +1,3 @@
-
 export type DashboardItemsState = {
     hideAdviceItem: boolean;
     hideCatFactItem: boolean;
