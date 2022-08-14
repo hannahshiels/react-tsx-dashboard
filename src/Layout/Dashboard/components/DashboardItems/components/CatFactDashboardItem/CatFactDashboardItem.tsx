@@ -1,9 +1,9 @@
 import { Empty } from "antd";
-import Api from "Constants/Api";
-import Text from "Constants/Text";
-import { useApi } from "Hooks/hooks";
+import Api from "@constants/Api";
+import Text from "@constants/Text";
+import { useApi } from "@hooks/hooks";
 
-import { DashboardApiItemProps } from "Interfaces/interfaces";
+import { DashboardApiItemProps } from "@interfaces/interfaces";
 import DashboardItem from "../DashboardItem/DashboardItem";
 
 type CatFact = {

@@ -1,10 +1,10 @@
 import { Empty, Typography } from "antd";
-import Api from "Constants/Api";
-import Text from "Constants/Text";
+import Api from "@constants/Api";
+import Text from "@constants/Text";
 
 import DashboardItem from "../DashboardItem/DashboardItem";
-import { DashboardApiItemProps } from "Interfaces/interfaces";
-import { useApi } from "Hooks/hooks";
+import { DashboardApiItemProps } from "@interfaces/interfaces";
+import { useApi } from "@hooks/hooks";
 
 
  type Quote = {
@@ -22,9 +22,9 @@ const ProgrammingQuoteDashboardItem = (props: DashboardApiItemProps) => {
 
     const createQuote = () => {
         return(
-            <div style={{display:"flex", flexDirection:"column"}}>
+            <div className="flexCol">
             <Typography> {programmingQuote.en} </Typography>
-            <Typography style={{marginTop:"1rem",marginLeft:"auto"}}> - {programmingQuote.author} </Typography>
+            <Typography className="quoteAuthor"> - {programmingQuote.author} </Typography>
             </div>
         )
     }

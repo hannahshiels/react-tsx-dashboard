@@ -1,6 +1,6 @@
 import { Checkbox, List, Modal } from "antd";
-import Text from "Constants/Text";
-import { DashboardItemsState } from "Types/types";
+import Text from "@constants/Text";
+import { DashboardItemsState } from "@models/models";
 
 interface CustomiseModalProps {
   isVisible: boolean;
@@ -66,6 +66,13 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     });
   };
 
+  const onMusicPlayerChange = () => {
+    props.setState({
+      ...props.dashboardItems,
+      hideMusicPlayerItem: !props.dashboardItems.hideMusicPlayerItem,
+    });
+  };
+
   const funcs = [
     onYearFactChange,
     onCatFactChange,
@@ -75,6 +82,7 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     onDadJokeChange,
     onYesOrNoChange,
     onLyricsChange,
+    onMusicPlayerChange,
   ];
   const headings = [
     Text.YearFactHeading,
@@ -85,12 +93,13 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     Text.DadJokeHeading,
     Text.YesOrNoHeading,
     Text.LyricsHeading,
+    Text.MusicPlayerHeading,
   ];
 
 
-  const renderListItem = (onChange: () => void, heading: string) => {
+  const renderListItem = (onChange: () => void, heading: string, key:number) => {
     return (
-      <List.Item>
+      <List.Item key={key}>
         <Checkbox defaultChecked onClick={onChange}>
           {heading}
         </Checkbox>
@@ -102,7 +111,7 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     let listItems = [];
     if(funcs.length === headings.length){
       for(let i = 0; i < funcs.length; i++){
-        const newListItem = renderListItem(funcs[i], headings[i])
+        const newListItem = renderListItem(funcs[i], headings[i], i)
         listItems.push(newListItem)
     }
     }

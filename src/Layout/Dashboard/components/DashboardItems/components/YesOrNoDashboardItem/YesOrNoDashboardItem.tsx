@@ -1,9 +1,9 @@
 import { Empty, Image } from "antd";
-import Api from "Constants/Api";
-import Text from "Constants/Text";
-import { useApi } from "Hooks/hooks";
+import Api from "@constants/Api";
+import Text from "@constants/Text";
+import { useApi } from "@hooks/hooks";
 
-import { DashboardApiItemProps } from "Interfaces/interfaces";
+import { DashboardApiItemProps } from "@interfaces/interfaces";
 import DashboardItem from "../DashboardItem/DashboardItem";
 
 type YesOrNo = {
@@ -19,7 +19,7 @@ const YesOrNoDashboardItem = (props: DashboardApiItemProps) => {
     if (!yesOrNo) return <Empty/>
 
     const createImg = () => {
-        return <Image style={{maxWidth:"300px"}} alt={Text.FoxImageHeading} src={yesOrNo.image} />
+        return <Image className="imgWidth" alt={Text.FoxImageHeading} src={yesOrNo.image} />
     }
 
     return(

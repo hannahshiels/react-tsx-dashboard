@@ -15,7 +15,7 @@ const DashboardItem: React.FC<DashboardItemProps> = (props) => {
         )
     }
 
-    return <Card style={{minWidth: "250px",maxWidth:"300px", minHeight:"200px", margin:"1rem"}} hoverable title={props.title}>
+    return <Card className="dashboardItem" hoverable title={props.title}>
         {props.description}
     </Card>
 }

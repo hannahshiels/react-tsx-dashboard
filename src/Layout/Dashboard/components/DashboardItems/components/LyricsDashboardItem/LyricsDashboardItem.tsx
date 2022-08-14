@@ -1,9 +1,9 @@
 import { Button, Empty, Form, Modal, Typography } from "antd";
-import Api from "Constants/Api";
-import Text from "Constants/Text";
+import Api from "@constants/Api";
+import Text from "@constants/Text";
 
 import DashboardItem from "../DashboardItem/DashboardItem";
-import { DashboardApiItemProps } from "Interfaces/interfaces";
+import { DashboardApiItemProps } from "@interfaces/interfaces";
 import Input from "antd/lib/input/Input";
 
 

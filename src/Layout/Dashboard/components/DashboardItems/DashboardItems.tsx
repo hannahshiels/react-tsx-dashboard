@@ -1,4 +1,4 @@
-import { DashboardItemsState } from "Types/types";
+import { DashboardItemsState } from "@models/models";
 import AdviceDashboardItem from "./components/AdviceDashboardItem/AdviceDashboardItem";
 import CatFactDashboardItem from "./components/CatFactDashboardItem/CatFactDashboardItem";
 import DadJokeDashboardItem from "./components/DadJokeDashboardItem/DadJokeDashboardItem";
@@ -8,17 +8,20 @@ import ProgrammingQuoteDashboardItem from "./components/ProgrammingQuoteDashboar
 import YearDashboardItem from "./components/YearDashboardItem/YearDashboardItem";
 import YesOrNoDashboardItem from "./components/YesOrNoDashboardItem/YesOrNoDashboardItem";
 import { Typography  } from "antd";
+import MusicPlayerDashboardItem from "./components/MusicPlayerDashboardItem/MusicPlayerDashboardItem";
+import Customise from "../Customise/Customise";
 const { Text, Link } = Typography;
 
 interface DashboardItemsProps {
-    display: DashboardItemsState
+    display: DashboardItemsState,
+    setDashboardItems: (dashboardItems: DashboardItemsState) => void;
 }
 
 const DashboardItems = (props: DashboardItemsProps) => {
     const allDashboardItemsVisibility = props.display.hideYearFactItem && props.display.hideCatFactItem && props.display.hideFoxItem && props.display.hideProgrammingItem && props.display.hideAdviceItem  && props.display.hideDadJokeItem && props.display.hideYesOrNoItem && props.display.hideLyricsItem;
 
     if(allDashboardItemsVisibility){
-        return(<Text> Leave and <Link href="https://www.google.com/" target="_blank"> find something else. </Link> </Text>)
+        return(<Text> Leave and <Link href="https://www.google.com/" target="_blank"> find something else to do. </Link> </Text>)
     }
 
     return <>
@@ -30,6 +33,11 @@ const DashboardItems = (props: DashboardItemsProps) => {
     <DadJokeDashboardItem hide={props.display.hideDadJokeItem}/>
     <YesOrNoDashboardItem hide={props.display.hideYesOrNoItem}/>
     <LyricsDashboardItem hide={props.display.hideLyricsItem}/>
+    <MusicPlayerDashboardItem hide={props.display.hideMusicPlayerItem} />
+    <Customise
+        dashboardItems={props.display}
+        setDashboardItems={props.setDashboardItems}
+      />
     </>
 }
 

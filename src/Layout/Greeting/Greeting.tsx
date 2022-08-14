@@ -1,7 +1,6 @@
 import { PageHeader } from "antd";
 import { useEffect, useState } from "react";
-import "Styles/css/App.css";
-import Text from "Constants/Text";
+import Text from "@constants/Text";
 
 const Greeting = () => {
   const [time, setTime] = useState(Date.now());
@@ -57,12 +56,12 @@ const Greeting = () => {
 
   const renderContent = () => {
     return (
-      <div style={{marginLeft:"auto"}}> {`${date} ${currentTime}`}  </div>
+      <div className="mlAuto"> {`${date} ${currentTime}`}  </div>
     )
   }
 
   return (
-    <PageHeader style={{width:"100%"}} className="header" ghost title={timeOfDay} extra={renderContent()}/>
+    <PageHeader className="header" ghost title={timeOfDay} extra={renderContent()}/>
   );
 };
 

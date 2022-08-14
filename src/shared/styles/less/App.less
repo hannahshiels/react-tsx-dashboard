@@ -1,0 +1,92 @@
+@import "~antd/dist/antd.css";
+@import "antd/dist/antd.less";
+
+.fullMinHeight {
+  min-height: 100vh;
+}
+
+.contentSpacing {
+  margin-bottom: 72px;
+  @media (max-width: @screen-xs) {
+    margin-bottom: 48px;
+  }
+}
+
+audio {
+  display: flex;
+  width: 100%;
+}
+
+.imgWidth {
+  max-width: 300px;
+}
+
+.mlAuto {
+  margin-left: auto;
+}
+
+.header {
+  width: 100%;
+  background-color: @white;
+  border-bottom: 1px solid @black;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboardItem {
+  width: 300px;
+  max-width: 300px;
+  min-height: 200px;
+  margin: 1rem;
+  @media (max-width: @screen-xs) {
+    min-width: auto;
+    min-height: auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.quoteAuthor {
+  margin-top: @margin-lg;
+  margin-left: auto;
+}
+
+.customiseBtn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  z-index: 10000;
+  @media (max-width: @screen-xs) {
+    width: 100%;
+    z-index: 0;
+    position: static;
+  }
+}
+
+.dashboardFooter {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: @layout-footer-padding;
+  @media (max-width: @screen-lg) {
+    position: static;
+  }
+}

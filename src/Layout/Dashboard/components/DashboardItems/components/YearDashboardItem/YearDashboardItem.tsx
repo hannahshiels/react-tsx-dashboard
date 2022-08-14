@@ -1,10 +1,10 @@
 import { Empty } from "antd";
-import Api from "Constants/Api";
-import Text from "Constants/Text";
+import Api from "@constants/Api";
+import Text from "@constants/Text";
 
 import DashboardItem from "../DashboardItem/DashboardItem";
-import { DashboardApiItemProps } from "Interfaces/interfaces";
-import { useApi } from "Hooks/hooks";
+import { DashboardApiItemProps } from "@interfaces/interfaces";
+import { useApi } from "@hooks/hooks";
 
 const YearDashboardItem = (props: DashboardApiItemProps) => {
     const hide = props.hide ?? false;
