@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 
 interface DashboardItemProps {
     hide?: boolean;
+    actions?: React.ReactNode[];
     title: string;
     description: string | ReactNode;
 }
@@ -14,10 +15,16 @@ const DashboardItem: React.FC<DashboardItemProps> = (props) => {
             <></>
         )
     }
-
-    return <Card className="dashboardItem" hoverable title={props.title}>
+    if(!props.actions){
+        return <Card className="dashboardItem" hoverable title={props.title}>
         {props.description}
     </Card>
+    } else {
+        return <Card actions={props.actions} className="dashboardItem" hoverable title={props.title}>
+        {props.description}
+    </Card>
+    }
+
 }
 
 export default DashboardItem;

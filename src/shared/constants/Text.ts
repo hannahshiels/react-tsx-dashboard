@@ -21,6 +21,10 @@ const Text = {
     RockMusicGenre: "Rock",
     LofiMusicGenre: "Lofi",
     PunkMusicGenre: "Punk",
+    PokemonHeading: "Random pokemon ✨",
+    PokemonNameHeading: "Name",
+    PokemonNumHeading: "#",
+
 }   
 
 export default Text;

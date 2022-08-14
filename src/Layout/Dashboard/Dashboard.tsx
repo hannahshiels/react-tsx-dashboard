@@ -13,6 +13,7 @@ const Dashboard = () => {
     hideLyricsItem: false,
     hideFoxItem: false,
     hideMusicPlayerItem: false,
+    hidePokemonItem: false,
   });
 
   return (
