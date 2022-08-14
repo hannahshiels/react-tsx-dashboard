@@ -27,25 +27,28 @@ const PokemonDashboardItem = (props: DashboardApiItemProps) => {
     return info;
   };
 
-  const [currentPokemon, setNewPokemon] = useState(info);
 
   // pokemon data from pokedex is sometimes undefined since some data is missing so we check and set a new one if that happens
   const checkPokemonExists = (poke: PokemonData) => {
-    if (poke === undefined || poke.sprites === undefined) {
-      setNewPokemon(getNewPokemon());
+    while (!poke || poke === undefined || poke.sprites === undefined || poke.sprites.animated === undefined) {
+      poke =  getNewPokemon()
     }
   };
 
-  checkPokemonExists(info);
+  checkPokemonExists(info)
 
-  const capitaliseWord = (word: string) => {
-    return `${word[0].toUpperCase()}${word.substring(1)}`;
-  };
+  const [currentPokemon, setNewPokemon] = useState(info);
 
   const refreshPokemon = () => {
     info = getNewPokemon();
     checkPokemonExists(info);
     setNewPokemon(info);
+  };
+
+
+
+  const capitaliseWord = (word: string) => {
+    return `${word[0].toUpperCase()}${word.substring(1)}`;
   };
 
   const renderTable = () => {
