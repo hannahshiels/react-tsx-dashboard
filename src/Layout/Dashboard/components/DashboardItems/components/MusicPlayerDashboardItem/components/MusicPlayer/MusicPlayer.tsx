@@ -1,45 +1,30 @@
 import lofi from "@assets/music/lofi.mp3";
 import punk from "@assets/music/punk.mp3";
 import rock from "@assets/music/rock.mp3";
+import Text from "@constants/Text"
 
 import { Segmented, Space } from "antd";
 import { useState } from "react";
 
 const MusicPlayer = () => {
-  const [genre, setGenre] = useState("Rock");
+  const [genre, setGenre] = useState(Text.RockMusicGenre);
+  const genres = [Text.RockMusicGenre, Text.LofiMusicGenre, Text.PunkMusicGenre]
 
-  const createRockPlayer = () => {
+  const createPlayer = (song:"mp3") => {
     return (
       <audio controls controlsList="nodownload">
-        <source src={rock} type="audio/mpeg" />
-      </audio>
-    );
-  };
-
-  const createLofiPlayer = () => {
-    return (
-      <audio controls controlsList="nodownload">
-        <source src={lofi} type="audio/mpeg" />
-      </audio>
-    );
-  };
-
-  const createPunkPlayer = () => {
-    return (
-      <audio controls controlsList="nodownload">
-        <source src={punk} type="audio/mpeg" />
+        <source src={song} type="audio/mpeg" />
       </audio>
     );
   };
 
   const onChange = (value: string | number) => {
-    console.log(value);
-    if (value === "Rock") {
-      setGenre("Rock");
-    } else if (value === "Punk") {
-      setGenre("Punk");
+    if (value === Text.RockMusicGenre) {
+      setGenre(Text.RockMusicGenre);
+    } else if (value === Text.PunkMusicGenre) {
+      setGenre(Text.PunkMusicGenre);
     } else {
-      setGenre("Lofi");
+      setGenre(Text.LofiMusicGenre);
     }
 
     return value;
@@ -47,15 +32,15 @@ const MusicPlayer = () => {
 
   return (
     <>
-      <Space direction="vertical" size="large" style={{ width: "100%" }}>
+      <Space direction="vertical" size="large" className="fullWidth">
         <Segmented
           block
           onChange={onChange}
-          options={["Rock", "Lofi", "Punk"]}
+          options={genres}
         />
-        {genre === "Rock" ? createRockPlayer() : ""}
-        {genre === "Lofi" ? createLofiPlayer() : ""}
-        {genre === "Punk" ? createPunkPlayer() : ""}
+        {genre === Text.RockMusicGenre ? createPlayer(rock) : ""}
+        {genre === Text.LofiMusicGenre ? createPlayer(lofi) : ""}
+        {genre === Text.PunkMusicGenre ? createPlayer(punk) : ""}
       </Space>
     </>
   );

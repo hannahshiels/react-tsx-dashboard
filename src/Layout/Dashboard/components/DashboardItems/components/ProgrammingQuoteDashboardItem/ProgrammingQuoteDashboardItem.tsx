@@ -22,9 +22,9 @@ const ProgrammingQuoteDashboardItem = (props: DashboardApiItemProps) => {
 
     const createQuote = () => {
         return(
-            <div style={{display:"flex", flexDirection:"column"}}>
+            <div className="flexCol">
             <Typography> {programmingQuote.en} </Typography>
-            <Typography style={{marginTop:"1rem",marginLeft:"auto"}}> - {programmingQuote.author} </Typography>
+            <Typography className="quoteAuthor"> - {programmingQuote.author} </Typography>
             </div>
         )
     }

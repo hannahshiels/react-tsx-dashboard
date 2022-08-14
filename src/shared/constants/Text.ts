@@ -18,6 +18,9 @@ const Text = {
     LyricsFormButton: "Search",
     LyricsModalHeading: "Search result",
     MusicPlayerHeading: "Play music ⏯️",
+    RockMusicGenre: "Rock",
+    LofiMusicGenre: "Lofi",
+    PunkMusicGenre: "Punk",
 }   
 
 export default Text;

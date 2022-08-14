@@ -56,12 +56,12 @@ const Greeting = () => {
 
   const renderContent = () => {
     return (
-      <div style={{marginLeft:"auto"}}> {`${date} ${currentTime}`}  </div>
+      <div className="mlAuto"> {`${date} ${currentTime}`}  </div>
     )
   }
 
   return (
-    <PageHeader style={{width:"100%"}} className="header" ghost title={timeOfDay} extra={renderContent()}/>
+    <PageHeader className="header" ghost title={timeOfDay} extra={renderContent()}/>
   );
 };
 

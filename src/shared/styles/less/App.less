@@ -1,12 +1,29 @@
 @import "~antd/dist/antd.css";
 @import "antd/dist/antd.less";
 
+body {
+  min-height: 100vh;
+}
+
+.contentSpacing {
+  margin-bottom: 72px;
+  @media (max-width:@screen-xs) {
+    margin-bottom: 48px;
+  }
+}
 
 audio {
   display: flex;
   width:100%;
 }
 
+.imgWidth {
+  max-width: 300px;
+}
+
+.mlAuto {
+  margin-left:auto;
+}
 
 .header {
   width: 100%;
@@ -37,6 +54,20 @@ audio {
   }
 }
 
+.fullWidth {
+  width: 100%;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.quoteAuthor {
+  margin-top: @margin-lg;
+  margin-left:auto;
+}
+
 .customiseBtn {
   position: fixed;
   bottom: 0;
@@ -55,5 +86,5 @@ audio {
     position: fixed;
     bottom: 0;
     width: 100%;
- 
+    padding: @layout-footer-padding;
 }

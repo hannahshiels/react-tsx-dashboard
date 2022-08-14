@@ -8,10 +8,10 @@ import Dashboard from "@layout/Dashboard/Dashboard";
 const App = () => {
   return (
     <div className="App">
-      <Layout className="funnyColours" style={{ minHeight: "100vh" }}>
+      <Layout className="funnyColours">
         <Space direction="vertical" size="large">
           <Greeting />
-          <Content style={{ marginBottom: "8rem" }}>
+          <Content className="contentSpacing">
             <Dashboard />
           </Content>
         </Space>

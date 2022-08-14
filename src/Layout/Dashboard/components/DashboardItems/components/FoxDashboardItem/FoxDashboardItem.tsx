@@ -17,7 +17,7 @@ const FoxDashboardItem = (props: DashboardApiItemProps) => {
     if (!fox) return <Empty/>
 
     const createImg = () => {
-        return <Image style={{maxWidth:"300px"}} alt={Text.FoxImageHeading} src={fox.image} />
+        return <Image className="imgWidth" alt={Text.FoxImageHeading} src={fox.image} />
     }
 
     return(
