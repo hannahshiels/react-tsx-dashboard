@@ -8,4 +8,5 @@ export type DashboardItemsState = {
     hideLyricsItem: boolean;
     hideFoxItem: boolean;
     hideMusicPlayerItem: boolean;
+    hidePokemonItem: boolean;
   }

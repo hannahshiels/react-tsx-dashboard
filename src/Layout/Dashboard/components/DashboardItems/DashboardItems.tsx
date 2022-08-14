@@ -10,6 +10,7 @@ import YesOrNoDashboardItem from "./components/YesOrNoDashboardItem/YesOrNoDashb
 import { Typography  } from "antd";
 import MusicPlayerDashboardItem from "./components/MusicPlayerDashboardItem/MusicPlayerDashboardItem";
 import Customise from "../Customise/Customise";
+import PokemonDashboardItem from "./components/PokemonDashboardItem/PokemonDashboardItem";
 const { Text, Link } = Typography;
 
 interface DashboardItemsProps {
@@ -34,6 +35,7 @@ const DashboardItems = (props: DashboardItemsProps) => {
     <YesOrNoDashboardItem hide={props.display.hideYesOrNoItem}/>
     <LyricsDashboardItem hide={props.display.hideLyricsItem}/>
     <MusicPlayerDashboardItem hide={props.display.hideMusicPlayerItem} />
+    <PokemonDashboardItem hide={props.display.hidePokemonItem} />
     <Customise
         dashboardItems={props.display}
         setDashboardItems={props.setDashboardItems}
