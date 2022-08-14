@@ -24,7 +24,7 @@ const Text = {
     PokemonHeading: "Random pokemon ✨",
     PokemonNameHeading: "Name",
     PokemonNumHeading: "#",
-
+    RPSHeading: "Play Rock, Paper, Scissors 🤘 🧻 ✂️"
 }   
 
 export default Text;

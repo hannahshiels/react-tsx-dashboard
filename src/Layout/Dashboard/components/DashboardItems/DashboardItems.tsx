@@ -7,40 +7,66 @@ import LyricsDashboardItem from "./components/LyricsDashboardItem/LyricsDashboar
 import ProgrammingQuoteDashboardItem from "./components/ProgrammingQuoteDashboardItem/ProgrammingQuoteDashboardItem";
 import YearDashboardItem from "./components/YearDashboardItem/YearDashboardItem";
 import YesOrNoDashboardItem from "./components/YesOrNoDashboardItem/YesOrNoDashboardItem";
-import { Typography  } from "antd";
+import { Typography } from "antd";
 import MusicPlayerDashboardItem from "./components/MusicPlayerDashboardItem/MusicPlayerDashboardItem";
 import Customise from "../Customise/Customise";
 import PokemonDashboardItem from "./components/PokemonDashboardItem/PokemonDashboardItem";
+import RPSDashboardItem from "./components/RPSDashboardItem/RPSDashboardItem";
 const { Text, Link } = Typography;
 
 interface DashboardItemsProps {
-    display: DashboardItemsState,
-    setDashboardItems: (dashboardItems: DashboardItemsState) => void;
+  display: DashboardItemsState;
+  setDashboardItems: (dashboardItems: DashboardItemsState) => void;
 }
 
 const DashboardItems = (props: DashboardItemsProps) => {
-    const allDashboardItemsVisibility = props.display.hideYearFactItem && props.display.hideCatFactItem && props.display.hideFoxItem && props.display.hideProgrammingItem && props.display.hideAdviceItem  && props.display.hideDadJokeItem && props.display.hideYesOrNoItem && props.display.hideLyricsItem;
+  const allDashboardItemsVisibility =
+    props.display.hideYearFactItem &&
+    props.display.hideCatFactItem &&
+    props.display.hideFoxItem &&
+    props.display.hideProgrammingItem &&
+    props.display.hideAdviceItem &&
+    props.display.hideDadJokeItem &&
+    props.display.hideYesOrNoItem &&
+    props.display.hideLyricsItem &&
+    props.display.hideMusicPlayerItem &&
+    props.display.hideRPSItem &&
+    props.display.hidePokemonItem;
+    
 
-    if(allDashboardItemsVisibility){
-        return(<Text> Leave and <Link href="https://www.google.com/" target="_blank"> find something else to do. </Link> </Text>)
-    }
+  return (
+    <>
+      {allDashboardItemsVisibility && (
+        <>
+          <Text>
+            {" "}
+            Leave and{" "}
+            <Link href="https://www.google.com/" target="_blank">
+              {" "}
+              find something else to do.{" "}
+            </Link>{" "}
+          </Text>
+        </>
+      )}
 
-    return <>
-    <YearDashboardItem hide={props.display.hideYearFactItem} />
-    <CatFactDashboardItem hide={props.display.hideCatFactItem}/>
-    <FoxDashboardItem hide={props.display.hideFoxItem}/>
-    <ProgrammingQuoteDashboardItem hide={props.display.hideProgrammingItem}/>
-    <AdviceDashboardItem hide={props.display.hideAdviceItem}/>
-    <DadJokeDashboardItem hide={props.display.hideDadJokeItem}/>
-    <YesOrNoDashboardItem hide={props.display.hideYesOrNoItem}/>
-    <LyricsDashboardItem hide={props.display.hideLyricsItem}/>
-    <MusicPlayerDashboardItem hide={props.display.hideMusicPlayerItem} />
-    <PokemonDashboardItem hide={props.display.hidePokemonItem} />
-    <Customise
+      <YearDashboardItem hide={props.display.hideYearFactItem} />
+      <CatFactDashboardItem hide={props.display.hideCatFactItem} />
+      <FoxDashboardItem hide={props.display.hideFoxItem} />
+      <ProgrammingQuoteDashboardItem hide={props.display.hideProgrammingItem} />
+      <AdviceDashboardItem hide={props.display.hideAdviceItem} />
+      <DadJokeDashboardItem hide={props.display.hideDadJokeItem} />
+      <YesOrNoDashboardItem hide={props.display.hideYesOrNoItem} />
+      <LyricsDashboardItem hide={props.display.hideLyricsItem} />
+      <MusicPlayerDashboardItem hide={props.display.hideMusicPlayerItem} />
+      <PokemonDashboardItem hide={props.display.hidePokemonItem} />
+      <RPSDashboardItem hide={props.display.hideRPSItem} />
+
+      <Customise
         dashboardItems={props.display}
         setDashboardItems={props.setDashboardItems}
       />
     </>
-}
+  );
+};
 
 export default DashboardItems;
