@@ -8,7 +8,7 @@ import Dashboard from "@layout/Dashboard/Dashboard";
 const App = () => {
   return (
     <div className="App">
-      <Layout className="funnyColours">
+      <Layout className="fullMinHeight">
         <Space direction="vertical" size="large">
           <Greeting />
           <Content className="contentSpacing">
