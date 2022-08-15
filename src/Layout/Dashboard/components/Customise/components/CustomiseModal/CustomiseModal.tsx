@@ -80,6 +80,13 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     });
   };
 
+  const onRPSChange = () => {
+    props.setState({
+      ...props.dashboardItems,
+      hideRPSItem: !props.dashboardItems.hideRPSItem,
+    });
+  };
+
   const funcs = [
     onYearFactChange,
     onCatFactChange,
@@ -90,7 +97,8 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     onYesOrNoChange,
     onLyricsChange,
     onMusicPlayerChange,
-    onPokemonChange
+    onPokemonChange,
+    onRPSChange
   ];
   const headings = [
     Text.YearFactHeading,
@@ -103,6 +111,7 @@ const CustomiseModal = (props: CustomiseModalProps) => {
     Text.LyricsHeading,
     Text.MusicPlayerHeading,
     Text.PokemonHeading,
+    Text.RPSHeading
   ];
 
 

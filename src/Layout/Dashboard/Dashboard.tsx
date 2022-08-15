@@ -14,6 +14,7 @@ const Dashboard = () => {
     hideFoxItem: false,
     hideMusicPlayerItem: false,
     hidePokemonItem: false,
+    hideRPSItem: false,
   });
 
   return (
