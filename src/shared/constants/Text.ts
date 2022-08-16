@@ -24,7 +24,7 @@ const Text = {
     PokemonHeading: "Random pokemon ✨",
     PokemonNameHeading: "Name",
     PokemonNumHeading: "#",
-    RPSHeading: "Play Rock, Paper, Scissors 🤘 🧻 ✂️",
+    RPSHeading: "Play 🤘 🧻 ✂️",
     RPSPlayMessage: "Play Rock, Paper, Scissors",
     RPSOptionsMessage: "Select an option below!",
     RPSWinMessage: "You won!",
