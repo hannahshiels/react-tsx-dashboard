@@ -31,6 +31,7 @@ const Text = {
     RPSLoseMessage: "You lost...",
     RPSTieMessage: "It was a tie.",
     RPSPlayAgainMessage: "Play again",
+    NoteHeading: "Your note",
 }   
 
 export default Text;

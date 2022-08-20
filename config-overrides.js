@@ -9,7 +9,6 @@ module.exports = function override(config) {
       '@styles': path.resolve(__dirname, 'src/shared/styles/css'),
       '@assets': path.resolve(__dirname, 'src/shared/assets'),
       '@interfaces': path.resolve(__dirname, 'src/shared/interfaces'),
-      '@models': path.resolve(__dirname, 'src/shared/models'),
       '@constants': path.resolve(__dirname, 'src/shared/constants'),
       '@hooks': path.resolve(__dirname, 'src/shared/hooks'),
     },

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Key } from "w3c-keys" 
 
 export function useApi<S>(api:string ) {
     const [data, setData] = useState<S>();
@@ -16,4 +17,17 @@ export function useApi<S>(api:string ) {
         getData();
       }, [api]);
       return data;
+}
+
+export function useKey(key:Key, func:()=>void) {
+      useEffect(()=>{
+        // fix type any later
+        const onKeyPress = (e:KeyboardEvent): void =>{
+          if(e.key === key){
+            func()
+          }
+        }
+        window.addEventListener("keypress", onKeyPress)
+        return () => window.removeEventListener("keypress", onKeyPress)
+      }, [func, key])
 }
