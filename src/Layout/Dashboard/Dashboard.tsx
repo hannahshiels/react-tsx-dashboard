@@ -1,6 +1,6 @@
 import DashboardItems from "./components/DashboardItems/DashboardItems";
 import { useState } from "react";
-import { DashboardItemsState } from "@models/models";
+import { DashboardItemsState } from "@interfaces/interfaces";
 
 const Dashboard = () => {
   const [dashboardItems, setDashboardItems] = useState<DashboardItemsState>({

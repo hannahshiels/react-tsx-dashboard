@@ -1,6 +1,6 @@
 import { Checkbox, List, Modal } from "antd";
 import Text from "@constants/Text";
-import { DashboardItemsState } from "@models/models";
+import { DashboardItemsState } from "@interfaces/interfaces";
 
 interface CustomiseModalProps {
   isVisible: boolean;

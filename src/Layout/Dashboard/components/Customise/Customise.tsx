@@ -2,7 +2,7 @@ import Button from "antd/lib/button";
 import { useState } from "react";
 import Text from "@constants/Text";
 import CustomiseModal from "./components/CustomiseModal/CustomiseModal";
-import { DashboardItemsState } from "@models/models";
+import { DashboardItemsState } from "@interfaces/interfaces";
 
 interface CustomiseProps {
   setDashboardItems:(dashboardItems: DashboardItemsState) => void;
