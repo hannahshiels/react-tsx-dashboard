@@ -21,7 +21,6 @@ export function useApi<S>(api:string ) {
 
 export function useKey(key:Key, func:()=>void) {
       useEffect(()=>{
-        // fix type any later
         const onKeyPress = (e:KeyboardEvent): void =>{
           if(e.key === key){
             func()
