@@ -1,6 +1,7 @@
 import { Form, Input, Modal, Space } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import { useState } from "react";
+import Text from "@constants/Text"
 
 interface CreateNoteModalProps {
   isVisible: boolean;
@@ -33,11 +34,11 @@ const CreateNoteModal = (props: CreateNoteModalProps) => {
       onCancel={props.closeModal}
     >
       <Form onFinish={(values) => console.log(values)} form={form}>
-        <Space className="fullWidth" size={"large"} direction="vertical">
+        <Space className="fullWidth" direction="vertical">
           <Form.Item name="title">
             <Input
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Title"
+              placeholder={Text.CreateNoteTitle}
             />
           </Form.Item>
           <Form.Item name="content">
@@ -47,7 +48,7 @@ const CreateNoteModal = (props: CreateNoteModalProps) => {
               size="large"
               showCount
               maxLength={100}
-              placeholder="Content"
+              placeholder={Text.CreateNoteContent}
             />
           </Form.Item>
         </Space>
